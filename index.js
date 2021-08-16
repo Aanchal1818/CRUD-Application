@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 });
 
 app.use("/course", CourseController);
-app.listen(process.env.PORT,()=>{
-    console.log("server started");
+app.listen(process.env.PORT  || 3000,()=>{
+    console.log("server started in port ${PORT}");
 });
 
